@@ -97,7 +97,7 @@
       el('circle', { r: kind === 'domain' ? R * 0.42 : R * 0.36, class: 'core' }, g);
       if (kind === 'domain') el('circle', { r: R + 7, fill: 'none', stroke: '#C9A961', 'stroke-width': 0.7, opacity: 0.5 }, g);
       const ty = (kind === 'domain' && !portrait && y < L.C[1]) ? -(R + 16) : (R + fs.off * (kind === 'domain' ? 0.95 : 0.8));
-      el('text', { y: ty, 'text-anchor': 'middle', 'font-size': kind === 'domain' ? fs.d : fs.c }, g).textContent = label;
+      el('text', { y: ty, 'text-anchor': 'middle', 'font-size': kind === 'domain' ? fs.d : fs.c, 'letter-spacing': lang === 'ar' ? '0' : (kind === 'domain' ? '0.4' : '0') }, g).textContent = label;
       g.addEventListener('click', e => { e.stopPropagation(); stopTour(); kind === 'domain' ? focusDomain(id) : openCase(id); });
       g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); g.dispatchEvent(new Event('click')); } });
     };

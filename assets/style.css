@@ -174,3 +174,6 @@ main{position:relative;flex:1;min-height:0}
 @media (max-width:819px){.hint h1{font-size:26px}.hint p{font-size:12.5px;max-width:300px}}
 .cards{scroll-padding-inline:18px}
 [lang=ar] .hint h1 em{font-style:normal}
+/* Arabic letters must stay joined: no letter-spacing anywhere in Arabic */
+[lang=ar] *,[lang=ar] .node text,[lang=ar] .node.domain text{letter-spacing:0!important}
+[lang=ar] .node.domain text{font-family:'IBM Plex Sans Arabic',sans-serif;font-weight:600}

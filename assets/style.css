@@ -154,6 +154,10 @@ main{position:relative;flex:1;min-height:0}
 .cvrow{margin-top:14px}
 .btn.cv{text-decoration:none}
 @media (max-width:480px){.btn.cv span{display:none}}
+@media (max-width:819px){
+  #tourLabel,.btn.cv span{display:none}
+  #tourBtn,.btn.cv{width:40px;padding:0;justify-content:center}
+}
 @media (max-width:520px){
   header{padding:10px 12px}
   .brand-t{font-size:18px}

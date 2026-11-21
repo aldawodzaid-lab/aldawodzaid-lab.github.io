@@ -26,7 +26,7 @@
   const $ = id => document.getElementById(id);
 
   function el(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
-  const isPortrait = () => window.innerWidth / Math.max(1, window.innerHeight - 200) < 0.9;
+  const isPortrait = () => window.innerWidth / Math.max(1, window.innerHeight - 200) < 1.05;
 
   /* static text */
   function applyText() {
